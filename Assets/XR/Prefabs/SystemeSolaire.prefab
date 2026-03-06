@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1929455579599168424}
   - component: {fileID: 8981984980420071354}
   - component: {fileID: 7769379156012082652}
+  - component: {fileID: 4652620014223772912}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -105,6 +106,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4652620014223772912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126898381718630697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
 --- !u!1 &3690249484632740244
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +133,7 @@ GameObject:
   - component: {fileID: 4072533650569227186}
   - component: {fileID: 1318710582291301853}
   - component: {fileID: 4018329936823831032}
+  - component: {fileID: 5527232449921118816}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Untagged
@@ -210,6 +227,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5527232449921118816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3690249484632740244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
 --- !u!1 &4280427271585210361
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +254,7 @@ GameObject:
   - component: {fileID: 6106066654257513212}
   - component: {fileID: 3686947348901200875}
   - component: {fileID: 6919882015436625304}
+  - component: {fileID: 59284141539932704}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -315,6 +348,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &59284141539932704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280427271585210361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
 --- !u!1 &4350350420387362810
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +375,7 @@ GameObject:
   - component: {fileID: 7632269786021652750}
   - component: {fileID: 5469695311370784965}
   - component: {fileID: 6674323531026754407}
+  - component: {fileID: 1327234435684809219}
   m_Layer: 0
   m_Name: Saturne
   m_TagString: Untagged
@@ -420,6 +469,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1327234435684809219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350350420387362810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
 --- !u!1 &4863164311725670539
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +601,7 @@ GameObject:
   - component: {fileID: 549529734580957943}
   - component: {fileID: 7968936056703799850}
   - component: {fileID: 6059506598954057882}
+  - component: {fileID: 1899229695693909977}
   m_Layer: 0
   m_Name: Mercure
   m_TagString: Untagged
@@ -630,6 +695,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1899229695693909977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5781439272714931852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
 --- !u!1 &5843382156537654573
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +722,7 @@ GameObject:
   - component: {fileID: 5604243254196008988}
   - component: {fileID: 1099135170019003065}
   - component: {fileID: 7352907264723499382}
+  - component: {fileID: 4266629040203312207}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -735,6 +816,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4266629040203312207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843382156537654573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
 --- !u!1 &5891778403045992480
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +883,7 @@ GameObject:
   - component: {fileID: 6473843253126297178}
   - component: {fileID: 4765275596874857563}
   - component: {fileID: 906061098245638698}
+  - component: {fileID: 8534376822436644095}
   m_Layer: 0
   m_Name: Lune
   m_TagString: Untagged
@@ -880,6 +977,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8534376822436644095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323067703048219066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 87905893151350370}
+  vitesseOrbite: 50
 --- !u!1 &8490347790726739062
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,6 +1004,7 @@ GameObject:
   - component: {fileID: 554862588580506001}
   - component: {fileID: 2861933124711686939}
   - component: {fileID: 1753950609321711731}
+  - component: {fileID: 5480106568190249274}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -985,6 +1098,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5480106568190249274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490347790726739062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
 --- !u!1001 &9100707366861888091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1059,10 +1187,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9184098375944258617, guid: 8ca18dc1b59665f42b14337deb1081cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2975806737394993136}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1377298779340218350, guid: 8ca18dc1b59665f42b14337deb1081cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7565796116908039862}
   m_SourcePrefab: {fileID: 100100000, guid: 8ca18dc1b59665f42b14337deb1081cc, type: 3}
 --- !u!4 &87905893151350370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9184098375944258617, guid: 8ca18dc1b59665f42b14337deb1081cc, type: 3}
   m_PrefabInstance: {fileID: 9100707366861888091}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7877095711516542389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1377298779340218350, guid: 8ca18dc1b59665f42b14337deb1081cc, type: 3}
+  m_PrefabInstance: {fileID: 9100707366861888091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7565796116908039862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877095711516542389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0247eef4b6568714aa2e5ddd0035de2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesseRotation: 20
+  centreOrbite: {fileID: 7951989729921957027}
+  vitesseOrbite: 40
