@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.EventSystems; // <-- NOUVEAU : Pour gérer les boutons (UI)
 
 public class PlaceOnPlane : MonoBehaviour
 {
@@ -11,41 +12,47 @@ public class PlaceOnPlane : MonoBehaviour
     [Header("Le scanner de clic")]
     public ARRaycastManager raycastManager;
     
-    // Liste pour mémoriser où le rayon touche le sol
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
-    
-    // Pour mémoriser si le système solaire est déjà dans la pièce
     private GameObject objetDejaPlace; 
 
     void Update()
     {
-        // On vérifie si un doigt touche l'écran
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
-            // Si le doigt vient tout juste de se poser sur l'écran
+            // NOUVEAU : Sécurité ! Si le doigt touche l'interface (un bouton), on bloque le code ici.
+            if (EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+            {
+                return; 
+            }
+
             if (touch.phase == TouchPhase.Began)
             {
-                // On lance un "rayon laser" depuis le doigt vers le sol réel
                 if (raycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
                 {
-                    // On récupère les coordonnées exactes (position + rotation) de l'impact
                     Pose hitPose = hits[0].pose;
 
-                    // Si on n'a pas encore fait apparaître le système solaire...
                     if (objetDejaPlace == null)
                     {
-                        // On le crée à l'endroit touché !
                         objetDejaPlace = Instantiate(objetAPlacer, hitPose.position, hitPose.rotation);
                     }
                     else
                     {
-                        // S'il existe déjà, on le déplace simplement au nouveau clic
                         objetDejaPlace.transform.position = hitPose.position;
                     }
                 }
             }
+        }
+    }
+
+    // NOUVEAU : La fonction magique qui sera activée par notre futur bouton
+    public void EffacerPlanetes()
+    {
+        if (objetDejaPlace != null)
+        {
+            Destroy(objetDejaPlace); // On détruit le clone du système solaire
+            objetDejaPlace = null;   // On vide la mémoire pour pouvoir recommencer
         }
     }
 }
