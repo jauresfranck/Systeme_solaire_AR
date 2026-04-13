@@ -76,15 +76,48 @@ public class PlaceOnPlane : MonoBehaviour
     }
 
     // L'encyclopédie
+    
     void AfficherInfosPlanete(string nomPlanete)
     {
         panneauInfos.SetActive(true);
         
-        if (nomPlanete == "Soleil") texteInfos.text = "<b>Le Soleil</b>\nÉtoile au centre du système. 5500°C en surface.";
-        else if (nomPlanete == "Terre") texteInfos.text = "<b>La Terre</b>\nNotre maison. Seule planète connue abritant la vie.";
-        else if (nomPlanete == "Mars") texteInfos.text = "<b>Mars</b>\nLa planète rouge. Abrite le plus haut volcan du système.";
-        else if (nomPlanete == "Saturne") texteInfos.text = "<b>Saturne</b>\nGéante gazeuse avec de magnifiques anneaux de glace.";
-        else if (nomPlanete == "Jupiter") texteInfos.text = "<b>Jupiter</b>\nLa plus grande planète du système solaire.";
-        else texteInfos.text = "<b>" + nomPlanete + "</b>\nUn astre fascinant de notre système.";
+        switch (nomPlanete)
+        {
+            case "Soleil":
+                texteInfos.text = "<b>Le Soleil</b>\nRayon : 696 340 km\nVolume : 1.3 million de Terres\nTempérature : 5 500 °C";
+                break;
+            case "Mercure":
+                texteInfos.text = "<b>Mercure</b>\nRayon : 2 439 km\nDistance : 58 millions km\nParticularité : La plus proche du Soleil.";
+                break;
+            case "Venus":
+            case "Vénus": // Au cas où tu aies mis un accent
+                texteInfos.text = "<b>Vénus</b>\nRayon : 6 051 km\nTempérature : 462 °C\nParticularité : La planète la plus chaude.";
+                break;
+            case "Terre":
+                texteInfos.text = "<b>La Terre</b>\nRayon : 6 371 km\nDistance : 150 millions km\nParticularité : Notre maison !";
+                break;
+            case "Lune":
+                texteInfos.text = "<b>La Lune</b>\nRayon : 1 737 km\nDistance Terre : 384 400 km\nParticularité : Notre satellite naturel.";
+                break;
+            case "Mars":
+                texteInfos.text = "<b>Mars</b>\nRayon : 3 389 km\nVolume : 15% de la Terre\nParticularité : La planète rouge.";
+                break;
+            case "Jupiter":
+                texteInfos.text = "<b>Jupiter</b>\nRayon : 69 911 km\nVolume : 1 321 Terres\nParticularité : La plus grande planète.";
+                break;
+            case "Saturne":
+                texteInfos.text = "<b>Saturne</b>\nRayon : 58 232 km\nParticularité : Célèbre pour ses anneaux de glace.";
+                break;
+            case "Uranus":
+                texteInfos.text = "<b>Uranus</b>\nRayon : 25 362 km\nTempérature : -224 °C\nParticularité : Elle tourne couchée sur le côté.";
+                break;
+            case "Neptune":
+                texteInfos.text = "<b>Neptune</b>\nRayon : 24 622 km\nDistance : 4.5 milliards km\nParticularité : Vents violents à 2 000 km/h.";
+                break;
+            default:
+                // Si on touche un objet qui n'est pas dans la liste (ex: l'anneau)
+                texteInfos.text = "<b>" + nomPlanete + "</b>\nUn astre fascinant de notre système.";
+                break;
+        }
     }
 }
