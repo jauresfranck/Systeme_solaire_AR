@@ -25,8 +25,12 @@ public class PlaceOnPlane : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
 
-            // Sécurité interface
-            if (EventSystem.current.IsPointerOverGameObject(touch.fingerId)) return; 
+            // --- LA SÉCURITÉ ABSOLUE ---
+            // On utilise notre propre fonction surpuissante pour vérifier l'interface
+            if (IsTouchOverUI(touch)) 
+            {
+                return; // Le doigt est sur l'UI, on bloque tout le reste !
+            }
 
             if (touch.phase == TouchPhase.Began)
             {
@@ -36,7 +40,9 @@ public class PlaceOnPlane : MonoBehaviour
                 
                 if (Physics.Raycast(ray, out hit3D))
                 {
-                    AfficherInfosPlanete(hit3D.collider.gameObject.name);
+                    // On nettoie le nom au cas où Unity ajoute "(Clone)" à la fin
+                    string nomNettoye = hit3D.collider.gameObject.name.Replace("(Clone)", "").Trim();
+                    AfficherInfosPlanete(nomNettoye);
                     return; // On a touché une planète, on arrête le code ici !
                 }
 
@@ -58,6 +64,19 @@ public class PlaceOnPlane : MonoBehaviour
         }
     }
 
+    // --- NOUVELLE FONCTION BLINDÉE POUR DÉTECTER L'INTERFACE ---
+    private bool IsTouchOverUI(Touch touch)
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = new Vector2(touch.position.x, touch.position.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+        
+        // Si results contient au moins 1 élément, ça veut dire qu'on touche l'UI !
+        return results.Count > 0;
+    }
+    // ------------------------------------------------------------
+
     // Fonction pour le bouton "Effacer"
     public void EffacerPlanetes()
     {
@@ -76,7 +95,6 @@ public class PlaceOnPlane : MonoBehaviour
     }
 
     // L'encyclopédie
-    
     void AfficherInfosPlanete(string nomPlanete)
     {
         panneauInfos.SetActive(true);
